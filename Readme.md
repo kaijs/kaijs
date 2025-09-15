@@ -1,9 +1,16 @@
-# Deno Examples: Hello, World!
-
-Simply serving a single file over HTTP
-
-## Get your own copy to explore
-
-You can clone this example into a repo of your own, and use it to set up a new application hosted on Deno Deploy in a few clicks
-
-[![Deploy on Deno](https://deno.com/button)](https://app.deno.com/new?clone=https://github.com/denoland/examples&path=hello-world)
+重构之道
+#一切以问题开始 通天塔如何建成
+#重构的本质 何时需要重构 何时需要装修
+#重构准备
+##代码未动，测试先行。自动化测试是必要前提
+#重构之术
+##移除全局变量
+##提取公共函数
+##公共UI控件准备 如何组件化
+##使用promise重构接口
+##使用typescript定义接口
+##业务逻辑与技术实现之分离 从业务中学习 在业务中实践
+#多余的话
+##文无第一，武无第二的框架之争（职责分离，模块性；可测试性）以不变应万变。欲以究天人之际，通古今之变，成一家之言。
+##重构实践
+#遵照PDCA/SDCA循环

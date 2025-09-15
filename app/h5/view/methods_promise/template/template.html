@@ -1,0 +1,48 @@
+<div class="container" id="container">
+  <div class="page article js_show">
+    <div class="page__hd">
+      <h1 class="page__title">一切都是异步的</h1>
+      <p class="page__desc">同步只是一种特殊的异步</p>
+    </div>
+    <div class="page__bd">
+      <article class="weui-article">
+        <h1></h1>
+        <section>
+          <h2 class="title"></h2>
+          <section>
+            <h3>将一切数据的获取看成是异步的过程</h3>
+            <p>
+              <h4>模拟数据的无缝替换</h4>
+              我们在开发新功能的时候往往会需要根据契约去生成一些数据，在接口联调的时候又需要删除这些数据，再改成从服务器端
+              请求数据，这时候代码多少有些改动。如果我们返回遵循promise的接口实现的对象，并监听其回调，
+              在自己的模拟的时候返回静态数据，在服务器端
+              有返回的时候再用服务器端的数据返回，除了切换数据源之外，就不需要对使用数据源的代码做任何改动了。
+            </p>
+            <p>
+              <h4>遵循单一职责的设计原则</h4>
+              <h4>组件的选择</h4>
+              我们在获取数据源的时候，基于的方式可能并不一样，在某些时候从服务器端获取的数据需要进行处理后才能使用，
+              根据单一职责原则，我们应该将数据处理好后提供给应用层使用。
+              譬如，我们在使用Rest原则设计接口之前可能会对所有的接口使用POST
+              方法来获取。
+              当我们升级到Rest风格的接口设计之后，如果我们的数据的获取和数据的使用是在不同地方，那么我就完全可以悄悄地去
+              改变数据地获取方法，也许我们使用ES6地接口，也可能是使用dojo地dStroe所提供地方法。
+            </p>
+            <p>
+              <h4>方便单位测试</h4>
+              我们在测试的时候经常要去考虑服务端的数据源mock，当我们的数据源的实现是与数据源的使用相互分离的时候，我们就
+              可以通过简单的配置实现在不同情况下采用不同的数据源，以达到测试数据mock的目的。
+            </p>
+              <pre>
+                <code>
+                </code>
+              </pre>
+            </p>
+          </section>
+        </section>
+      </article>
+    </div>
+    <div class="page__ft" style='display:none'>
+      <a href="javascript:home()"><img src="./images/icon_footer_link.png"></a>
+    </div>
+  </div></div>

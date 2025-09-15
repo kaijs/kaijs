@@ -1,0 +1,32 @@
+<div class="container" id="container"><div class="page article js_show">
+  <div class="page__hd">
+    <h1 class="page__title">编码规范</h1>
+    <p class="page__desc"></p>
+  </div>
+  <div class="page__bd">
+    <article class="weui-article">
+      <h1></h1>
+      <section>
+        <h2 class="title"></h2>
+        <section>
+          <h3></h3>
+          <p>
+            <li>
+              1. 意图和实现相分离。events中的事件绑定的回调中只去调用具体的实现函数但本身不应涉及实现细节，具体实现放在viewUtils中；
+            </li><li>
+              2. 使用主题模式解耦。不同view之间的交互尽量使用topic主题交互，避免直接调用对方的方法；
+            </li><li>
+              3. 尽量写明白注释。在自己新添加的view代码上上写上自己的邮箱，每个代码上线前需要给其他人review，review完后添加review人的邮箱；
+            </li><li>
+              4. 方法函数的实现代码一定要跟函数名一致，跟函数名无关的操作应该独立成方法被调用（选择合适的新函数名），函数代码长度不要超过一屏（28行左右），否则难以阅读和理解
+            </li>
+          </p>
+          <p>
+          </p>
+        </section>
+      </article>
+    </div>
+    <div class="page__ft">
+      <a href="javascript:home()"></a>
+    </div>
+  </div></div>

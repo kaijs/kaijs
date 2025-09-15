@@ -1,0 +1,54 @@
+<div class="container" id="container">
+  <div class="page article js_show">
+    <div class="page__hd">
+      <h1 class="page__title">提取公共函数</h1>
+      <p class="page__desc">优秀的程序员既懒又笨</p>
+    </div>
+    <div class="page__bd">
+      <article class="weui-article">
+        <h1></h1>
+        <section>
+          <h2 class="title"></h2>
+          <section>
+            <h3>如何为框架贡献代码</h3>
+            <p>
+              当我们同时在支持多个业务系统的时候，我们往往希望公共函数能够被提取出来，被多个系统来共用，
+              我们的函数在多个系统中使用的时候也可以即使修正在生产中出现的问题。当我们在提取公共函数的
+              时候需要考虑如何提供合适的API来说明我们的公共函数，公共函数的API定义需要充分考虑可扩展性
+              ，因为我们的函数可能变得越来越复杂。譬如举例来说，我们在验证一个身份证号码的函数，我们可能认为只需要
+              提供一个身份证号码就可以了，但是后面你会发现一个身份证号码远远不够，譬如我们只能接受18位数的身份证号码，
+              而不再允许使用15位的身份证号码，譬如我们的身份证号码是否需要判断末尾字母X的大小写？我们可以将函数的API定义成
+              一个接受对象的函数，也可以设计成一个需要提供身份证信息和一个opts备选项设置的函数。
+              <pre>
+                <code>
+                  isValidIdCard:function(idNumber,opts){
+                    var opts = opts || {};
+                    if(otps.forceEighteen){
+
+                    }else{
+
+                    }
+                  }
+                </code>
+              </pre>
+              <li>
+                首先，可以按照功能对方法函数进行分类；
+              </li>
+              <li>
+                是否已经存在类似的公共函数，是否可以扩展以其适合新的需要
+              </li>
+              <li>
+                提供新的API说明或则更新原来的API说明
+              </li>
+              <li>
+                提供测试代码
+              </li>
+            </p>
+          </section>
+        </section>
+      </article>
+    </div>
+    <div class="page__ft" style='display:none'>
+      <a href="javascript:home()"><img src="./images/icon_footer_link.png"></a>
+    </div>
+  </div></div>

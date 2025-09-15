@@ -1,0 +1,44 @@
+<div class="page panel js_show">
+  <div class="page__hd">
+    <h1 class="page__title">重构之术</h1>
+    <p class="page__desc">具体方法实践</p>
+  </div>
+  <div class="page__bd">
+    <div class="weui-panel weui-panel_access">
+      <div class="weui-panel__hd">目录</div>
+      <div class="weui-panel__bd">
+        <div class="weui-media-box weui-media-box_text" v-on:click="_actionTrigger('gotoPage','h5/view/methods_global')" >
+          <h4 class="weui-media-box__title">移除全局变量</h4>
+          <p class="weui-media-box__desc">Global namespace is very very bad!</p>
+        </div>
+        <div class="weui-media-box weui-media-box_text" v-on:click="_actionTrigger('gotoPage','h5/view/methods_utils')">
+          <h4 class="weui-media-box__title">在继承链中移动方法，提取公共函数</h4>
+          <p class="weui-media-box__desc">Protect your investment</p>
+        </div>
+        <div class="weui-media-box weui-media-box_text" v-on:click="_actionTrigger('gotoPage','h5/view/methods_component')">
+          <h4 class="weui-media-box__title">组件化</h4>
+          <p class="weui-media-box__desc">四海之内皆组件</p>
+        </div>
+        <div class="weui-media-box weui-media-box_text" v-on:click="_actionTrigger('gotoPage','h5/view/methods_promise')">
+          <h4 class="weui-media-box__title">使用promise重构接口</h4>
+          <p class="weui-media-box__desc">世界是异步的</p>
+        </div>
+        <div class="weui-media-box weui-media-box_text" v-on:click="_actionTrigger('gotoPage','h5/view/methods_typescript')">
+          <h4 class="weui-media-box__title">使用typescript定义接口</h4>
+          <p class="weui-media-box__desc">多学学底层知识更重要</p>
+        </div>
+      </div>
+
+      <div class="weui-panel__ft" style='display:none'>
+        <a href="javascript:void(0);" class="weui-cell weui-cell_access weui-cell_link">
+          <div class="weui-cell__bd">查看更多</div>
+          <span class="weui-cell__ft"></span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+  <div class="page__ft">
+    <a href="javascript:home()"><img src="./images/icon_footer_link.png" style='display:none'></a>
+  </div>
+</div>

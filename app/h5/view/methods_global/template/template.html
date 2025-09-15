@@ -1,0 +1,55 @@
+<div class="container" id="container">
+  <div class="page article js_show">
+    <div class="page__hd">
+      <h1 class="page__title">全局空间是非常可怕的事情</h1>
+      <p class="page__desc"></p>
+    </div>
+    <div class="page__bd">
+      <article class="weui-article">
+        <h1></h1>
+        <section>
+          <h2 class="title"></h2>
+          <section>
+            <h3>存储空间</h3>
+            <p>
+              由于单页应用的复用，存储空间的私有性就非常重要。
+              同一个页面可能在多个应该场景中实例化，因此不同页面的存储空间必须独立，否则就会导致数据之间互相影像。
+              在单页应用中，对每一个页面初始化的时候生成独立的存储空间。
+            </p>
+          </section>
+          <section>
+            <h3>DOM节点</h3>
+            <p>
+              需要对ID节点进行添加后缀，以避免重复的ID存在。在某些第三方库中，往往默认为id是全局唯一的，如果在单页
+              应用中出现ID重复的节点，可能导致页面工作不正常。框架层在解析页面时可以将页面中的id全部添加后缀，以此
+              来保证全局页面中不存在任何重复的id。
+            </p>
+          </section>
+          <section>
+            <h3>CSS样式</h3>
+            <p>
+              在某个页面中定义的样式需要将其影像限定到特定的view空间
+              <pre>
+                <code>
+                  [data-viewname="h5/view/methods_global"] {
+                    color:'red'
+                  }
+                </code>
+              </pre>
+              如果存在复用相同页面需要使用相同样式的情况，可以使用redirect_viewname的命名空间
+              <pre>
+                <code>
+                  [data-redirect_viewname="h5/view/methods_global"] {
+                    color:'red'
+                  }
+                </code>
+              </pre>
+            </p>
+          </section>
+        </section>
+      </article>
+    </div>
+    <div class="page__ft" style='display:none'>
+      <a href="javascript:home()"><img src="./images/icon_footer_link.png"></a>
+    </div>
+  </div></div>
